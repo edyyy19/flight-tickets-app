@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: lightgray;
+}
+
+.universal-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 33px 0;
+  gap: 25px;
+  background-color: #adadad;
+  width: 44rem;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.103);
+}
+
+.tickets-available {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+/* ======================= DESIGN TICKETS CONTAINER ========================= */
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  height: 8rem;
+  border-radius: 12px;
+  background-color: white;
+  /* border: 1.5px solid lightgray; */
+}
+/* ================= TICKETS DEPARTURE SECTION ================== */
+.tickets-departure {
+  align-content: center;
+  width: 100%;
+  height: 20%;
+  background-color: #4f518c;
+  border-radius: 10px 10px 0 0;
+}
+.tickets-departure .departure {
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  color: #907ad6;
+}
+.tickets-departure .date {
+  color: white;
+}
+/* ====================================================== */
+/* ================= TICKETS DETAILS SECTION ================== */
+.tickets-details {
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+.tickets-details-price-per-adult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.tickets-details-price {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4f518c;
+}
+.tickets-details-per-adult {
+  color: lightgrey;
+}
+
+.tickets-details-flight-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: #4f518c;
+}
+.tickets-details-flight-line {
+  width: 100px;
+  height: 2px;
+  background-color: black;
+  margin: 0 1rem;
+}
+.tickets-details-icon {
+  margin: 0 15px;
+}
+.tickets-details-flight-city {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tickets-details-buttons {
+  margin: auto;
+}
+.tickets-buy-minus,
+.tickets-buy-plus {
+  outline: none;
+  border: none;
+  font-size: 25px;
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.tickets-buy-minus {
+  color: #907ad6;
+  text-align: center;
+}
+.tickets-buy-plus {
+  background-color: #2c2a4a;
+  color: white;
+  text-align: center;
+}
+.tickets-counter {
+  font-size: 18px;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #4f518c;
+}
+/* ====================================================== */
+/* ================= TICKETS CHECKOUT SECTION ================== */
+.universal-container:nth-child(2) {
+  margin-top: 20px;
+  height: auto;
+  gap: 0;
+  padding: 0;
+}
+.tickets-checkout-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background: white;
+  width: 95%;
+  height: 6rem;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px auto;
+}
+.tickets-checkout-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+  background-color: lightgray;
+}
+.tickets-checkout-flight-details {
+  display: flex;
+  flex-direction: column;
+  /* background: blue; */
+  width: 45%;
+  font-size: 25px;
+  color: #2c2a4a;
+}
+.tickets-checkout-flight {
+  color: #4f518c;
+}
+.tickets-checkout-flight {
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.tickets-checkout-quantity,
+.tickets-checkout-quantity-text {
+  font-size: 20px;
+  font-weight: 500;
+
+  color: #2c2a4a;
+}
+.tickets-checkout-quantity {
+  color: #4f518c;
+}
+
+.tickets-checkout-total {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4f518c;
+}
+.tickets-checkout-remove-btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2c2a4a;
+  margin-right: 10px;
+}
+.tickets-checkout-remove-btn:hover {
+  transition: 0.2s;
+  color: red;
+}
