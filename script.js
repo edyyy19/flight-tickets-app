@@ -62,7 +62,7 @@ for (let i = 0; i < ticketsDetails.length; i++) {
           </div>
           <div class="tickets-details-buttons">
             <button class="tickets-buy-minus" data-flight-id="${ticketsDetails[i].id}">-</button>
-            <span class="tickets-counter">${ticketsDetails[i].quantity}</span>
+            <span class="tickets-counter" data-flight-id="${ticketsDetails[i].id}">${ticketsDetails[i].quantity}</span>
             <button class="tickets-buy-plus" data-flight-id="${ticketsDetails[i].id}">+</button>
           </div>
         </div>
@@ -199,6 +199,19 @@ const checkoutTicketsTotalPreviewAdd = (e) => {
           (element) => element.id === parseInt(flightId)
         );
         ticketsDetails[flightIndex].quantity = 0;
+
+        const ticketQuantity = document.querySelector(
+          `span[data-flight-id="${ticketsDetails[flightIndex].id}"]`
+        );
+        ticketQuantity.innerText = 0;
+        if (ticketsDetails[flightIndex].quantity < 1) {
+          const colorMinusButton = document.querySelector(
+            `.tickets-buy-minus[data-flight-id="${ticketsDetails[flightIndex].id}"]`
+          );
+          colorMinusButton.style.backgroundColor = '#e7e7e7';
+          colorMinusButton.style.color = '#907ad6';
+        }
+        return false;
       });
   }
 };
