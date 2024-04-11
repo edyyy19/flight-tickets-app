@@ -162,6 +162,13 @@ const checkoutTicketsTotalPreviewAdd = (e) => {
     document.querySelector(
       `.tickets-checkout-quantity[data-flight-id="${ticketsDetails[flightIndex].id}"]`
     ).innerText = ticketsDetails[flightIndex].quantity;
+
+    // de updatat pretul cand " - " e apasat
+    document.querySelector(
+      `.tickets-checkout-total[data-flight-id="${ticketsDetails[flightIndex].id}"]`
+    ).innerText = `$${parseFloat(
+      ticketsDetails[flightIndex].quantity * ticketsDetails[flightIndex].price
+    ).toFixed(2)}`;
   } else {
     const ticketsCheckoutContainer = document.createElement('div');
     ticketsCheckoutContainer.classList.add('tickets-checkout-container');
@@ -236,4 +243,9 @@ const removeOneTicketFromCheckout = (e) => {
     );
     y.innerText = parseInt(y.innerText) - 1;
   }
+  document.querySelector(
+    `.tickets-checkout-total[data-flight-id="${ticketsDetails[flightIndex].id}"]`
+  ).innerText = `$${parseFloat(
+    ticketsDetails[flightIndex].quantity * ticketsDetails[flightIndex].price
+  ).toFixed(2)}`;
 };
